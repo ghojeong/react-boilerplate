@@ -29,11 +29,9 @@ freewheelin 과제
     ├── components
     ├── configs
     ├── epics
-    ├── layouts
     ├── lib
     ├── models
     ├── reducers
-    ├── routes
     ├── screens
     ├── selectors
     ├── services
@@ -48,8 +46,6 @@ freewheelin 과제
   - 보안상 민감하게 관리해야하는 환경변수들을 모아놓은 디렉토리
 - epics
   - [redux-observable의 에픽](https://redux-observable.js.org/docs/basics/Epics.html)을 정의해 놓은 디렉토리
-- layouts
-  - 화면의 뼈대가 되는 레이아웃들이 있는 디렉토리
 - lib
   - 모듈로 분리할 수 있는 부분들을 라이브러리로 정리한 디렉토리
 - models
@@ -57,9 +53,6 @@ freewheelin 과제
   - 지금은 interface로 정의되어 있지만, instance를 직접 만들고 수정할 필요가 있을 경우 class로 만들 수도 있다.
 - reducers
   - [리덕스 리듀서](https://redux.js.org/basics/reducers)를 정의해 놓은 디렉토리
-- routes
-  - `/screens`에 정의된 화면으로 이동할 수 있도록, 라우팅과 관련한 것들을 모아놓은 디렉토리
-  - 본래 리액트는 url을 통해 라우팅을 하지만, 이 프로젝트에서는 진행된 step 에 따라 라우팅 되도록 한다.
 - screens
   - 라우팅에 따라 보여지는 화면 리액트 컴포넌트들을 정의한 디렉토리
 - selectors

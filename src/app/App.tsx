@@ -7,7 +7,7 @@ import { SnackbarProvider } from "notistack";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import ThemeProvider from "@material-ui/styles/ThemeProvider";
 import { defaultTheme } from "app/themes";
-import { AppRouter } from "app/routes";
+import { MainScreen } from "app/screens";
 import { rootEpic } from "app/epics";
 import { rootReducer } from "app/reducers";
 import * as services from "app/services";
@@ -25,7 +25,7 @@ const App = () => (
       <SnackbarProvider>
         <CssBaseline />
         <Notifier />
-        <AppRouter />
+        <MainScreen />
       </SnackbarProvider>
     </ThemeProvider>
   </Provider>
