@@ -4,7 +4,7 @@ export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       height: "36px",
-      width: "81px",
+      width: "84px",
       fontSize: 14,
       fontWeight: "bold"
     },
