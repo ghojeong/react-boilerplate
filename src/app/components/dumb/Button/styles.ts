@@ -10,6 +10,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     outlined: {
       border: "1px solid #E0E0E0 !important"
+    },
+    contained: {
+      boxShadow: "none !important"
     }
   })
 );

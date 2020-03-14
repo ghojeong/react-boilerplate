@@ -9,10 +9,10 @@ interface Props {
 export const Button: FC<Props> = ({ children, active, className }) => {
   const classes = useStyles();
 
-  if (active) {
+  if (true) {
     return (
       <MuiButton
-        className={`${classes.root} ${className}`}
+        className={`${classes.root} ${classes.contained} ${className}`}
         color="primary"
         variant="contained"
       >
