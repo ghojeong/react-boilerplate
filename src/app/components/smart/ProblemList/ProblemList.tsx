@@ -14,7 +14,7 @@ export const ProblemList: FC<Props> = ({ problems, activeIdx }) => {
     <List className={classes.root}>
       {problems.map((problem, idx) => (
         <ProblemItem
-          key={`problem-${problem.id}`}
+          key={`problem-${idx}`}
           problem={problem}
           problemArrIdx={idx}
           active={idx === activeIdx}

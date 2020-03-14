@@ -13,7 +13,7 @@ export const SimilarList: FC<Props> = ({ similars }) => {
     <List className={classes.root}>
       {similars.map((similar, idx) => (
         <SimilarItem
-          key={`similar-${similar.id}`}
+          key={`similar-${idx}`}
           similar={similar}
           similarArrIdx={idx}
         />

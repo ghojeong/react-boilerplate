@@ -1,3 +1,4 @@
+import cloneDeep from "lodash/cloneDeep";
 import { getType } from "typesafe-actions";
 import {
   Actions,
@@ -23,7 +24,7 @@ export const similarsReducer = (
   state = initialState,
   action: Actions
 ): SimilarsState => {
-  const similarArr = state.array;
+  const similarArr = cloneDeep(state.array);
   switch (action.type) {
     case getType(resetAction):
       return initialState;

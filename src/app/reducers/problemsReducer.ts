@@ -1,3 +1,4 @@
+import cloneDeep from "lodash/cloneDeep";
 import { getType } from "typesafe-actions";
 import {
   Actions,
@@ -27,7 +28,7 @@ export const problemsReducer = (
   state = initialState,
   action: Actions
 ): ProblemsState => {
-  const problemArr = state.array;
+  const problemArr = cloneDeep(state.array);
   switch (action.type) {
     case getType(resetAction):
       return initialState;
