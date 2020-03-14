@@ -7,7 +7,6 @@ import MuiTypography from "@material-ui/core/Typography";
 
 import MuiDivider from "@material-ui/core/Divider";
 import MuiPaper from "@material-ui/core/Paper";
-import MuiButton from "@material-ui/core/Button";
 import MuiCircularProgress from "@material-ui/core/CircularProgress";
 
 /**
@@ -26,5 +25,4 @@ export const Typography = MuiTypography;
 
 export const Divider = MuiDivider;
 export const Paper = MuiPaper;
-export const Button = MuiButton;
 export const CircularProgress = MuiCircularProgress;

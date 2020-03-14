@@ -10,6 +10,7 @@ export const defaultTheme = createMuiTheme({
     }
   },
   typography: {
+    fontSize: 14,
     fontFamily: "Noto Sans KR"
   }
 });

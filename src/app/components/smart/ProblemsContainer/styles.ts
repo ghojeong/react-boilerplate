@@ -15,7 +15,6 @@ export const useStyles = makeStyles((theme: Theme) =>
       paddingLeft: theme.spacing(2)
     },
     title: {
-      size: 14,
       fontWeight: "bold",
       color: "#4C4C4C"
     },

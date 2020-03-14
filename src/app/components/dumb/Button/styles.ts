@@ -3,8 +3,13 @@ import { Theme, makeStyles, createStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      maxHeight: `50vh - ${theme.spacing(10)}`,
-      overflow: "auto"
+      height: "36px",
+      width: "81px",
+      fontSize: 14,
+      fontWeight: "bold"
+    },
+    outlined: {
+      border: "1px solid #E0E0E0 !important"
     }
   })
 );

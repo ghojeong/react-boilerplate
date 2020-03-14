@@ -11,11 +11,12 @@ export const ProblemList: FC<Props> = ({ problems, activeIdx }) => {
   const classes = useStyles();
 
   return (
-    <List className={classes.list}>
+    <List className={classes.root}>
       {problems.map((problem, idx) => (
         <ProblemItem
           key={`problem-${problem.id}`}
           problem={problem}
+          problemIdx={idx}
           active={idx === activeIdx}
         />
       ))}

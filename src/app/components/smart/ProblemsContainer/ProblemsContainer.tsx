@@ -1,14 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useStyles } from "./styles";
-import {
-  Box,
-  AppBar,
-  Typography,
-  Divider,
-  CircularProgress,
-  ProblemList
-} from "app/components";
+import { Box, AppBar, CircularProgress, ProblemList } from "app/components";
 import { fetchProblemsAsyncAction } from "app/actions";
 import { problemsSelector } from "app/selectors";
 
