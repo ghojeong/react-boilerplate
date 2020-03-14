@@ -8,5 +8,8 @@ export const defaultTheme = createMuiTheme({
       dark: "#006699",
       contrastText: "#ffffff"
     }
+  },
+  typography: {
+    fontFamily: "Noto Sans KR"
   }
 });

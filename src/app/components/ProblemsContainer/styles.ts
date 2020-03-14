@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       height: "100%"
     },
     appBar: {
-      height: "64px",
+      height: "48px",
       boxShadow: "none",
       color: "#000000",
       backgroundColor: "#FFFFFF",
@@ -14,8 +14,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       justifyContent: "center",
       paddingLeft: theme.spacing(2)
     },
+    title: {
+      size: 14,
+      fontWeight: "bold",
+      color: "#4C4C4C"
+    },
     bodyContainer: {
-      height: `calc(100% - 64px)`,
+      height: `calc(100% - 48px)`,
       overflow: "auto"
     },
     circularProgress: {
