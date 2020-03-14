@@ -26,7 +26,6 @@ freewheelin 과제
 └── src
   └── app
     ├── actions
-    ├── assets
     ├── components
     ├── configs
     ├── epics
@@ -43,8 +42,6 @@ freewheelin 과제
 
 - actions
   - [리덕스 액션](https://redux.js.org/basics/actions)을 정의해 놓은 디렉토리
-- assets
-  - 정적인 데이터들에 관한 파일들을 모아놓는 디렉토리
 - components
   - [리액트 컴포넌트](https://ko.reactjs.org/docs/components-and-props.html)를 모아놓은 디렉토리
 - configs

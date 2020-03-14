@@ -1,21 +1,15 @@
 import { ExtraActions } from "./extraActions";
-import { StepActions } from "./stepActions";
-import { TargetFilterActions } from "./targetFilterActions";
-import { CustomerTagActions } from "./customerTagActions";
-import { TargetsActions } from "./targetActions";
 import { NotificationActions } from "./notificationActions";
+import { ProblemActions } from "./problemActions";
+import { SimilarActions } from "./similarActions";
 
 export * from "./extraActions";
-export * from "./stepActions";
-export * from "./targetFilterActions";
-export * from "./customerTagActions";
-export * from "./targetActions";
 export * from "./notificationActions";
+export * from "./problemActions";
+export * from "./similarActions";
 
 export type Actions =
   | ExtraActions
-  | StepActions
-  | TargetFilterActions
-  | CustomerTagActions
-  | TargetsActions
-  | NotificationActions;
+  | NotificationActions
+  | ProblemActions
+  | SimilarActions;

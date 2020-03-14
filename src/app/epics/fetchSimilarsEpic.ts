@@ -4,28 +4,28 @@ import { ActionsObservable, Epic } from "redux-observable";
 import { isActionOf } from "typesafe-actions";
 import {
   Actions,
-  fetchCustomerTagsAsyncAction,
+  fetchSimilarsAsyncAction,
   enqueueSnackbarAction
 } from "app/actions";
 import * as service from "app/services";
 
 type Service = typeof service;
 
-export const fetchCustomerTagsEpic: Epic = (
+export const fetchSimilarsEpic: Epic = (
   actions$: ActionsObservable<Actions>,
   _,
-  { customerTagService }: Service
+  { similarService }: Service
 ) => {
   return actions$.pipe(
-    filter(isActionOf(fetchCustomerTagsAsyncAction.request)),
+    filter(isActionOf(fetchSimilarsAsyncAction.request)),
     mergeMap(() =>
-      customerTagService.getCustomerTags().pipe(
-        switchMap(data => of(fetchCustomerTagsAsyncAction.success(data))),
+      similarService.getSimilars().pipe(
+        switchMap(data => of(fetchSimilarsAsyncAction.success(data))),
         catchError(err =>
           of(
-            fetchCustomerTagsAsyncAction.failure(String(err)),
+            fetchSimilarsAsyncAction.failure(String(err)),
             enqueueSnackbarAction({
-              message: "Get customer-tags error",
+              message: "Get Similars Error",
               variant: "error"
             })
           )

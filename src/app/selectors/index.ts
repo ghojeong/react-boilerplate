@@ -5,3 +5,5 @@ export * from "./isLoadingSelector";
 export * from "./targetsSelector";
 export * from "./optionsSelector";
 export * from "./notifiactionSelector";
+export * from "./problemsSelector";
+export * from "./similarsSelector";

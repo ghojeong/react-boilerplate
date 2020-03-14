@@ -1,3 +1,2 @@
-export * from "./targetsModel";
-export * from "./customerTagModel";
 export * from "./notificationModel";
+export * from "./problemModel";
