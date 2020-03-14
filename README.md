@@ -82,12 +82,3 @@ freewheelin 과제
 
 - camelCase를 기본으로 하되, 컴포넌트와 CTO 모델은 PascalCase를 사용한다.
 - boolean과 관련된 변수에는 prefix로 is~, has~와 같은 prefix를 붙인다.
-
-## 진행상황 보고
-
-### AS-IS
-
-### TO-BE
-
-- material-ui에 의존적인 컴포넌트들을, 디자인 시안에 맞게 다시 개발해야함
-  - `app/components/dumb/material`
