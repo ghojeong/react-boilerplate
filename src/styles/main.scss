@@ -1,6 +1,6 @@
 html,
 body,
-body > div {
-  height: 100%;
-  min-width: 550px;
+body > div:first-child {
+  min-width: 1024px;
+  min-height: 100vh;
 }
