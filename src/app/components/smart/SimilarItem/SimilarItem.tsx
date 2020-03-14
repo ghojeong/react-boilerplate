@@ -42,7 +42,7 @@ export const SimilarItem: FC<Props> = ({ similar, similarArrIdx }) => {
   return (
     <li className={classes.root}>
       <div className={classes.header}>
-        <span className={classes.problemType}>{problemType}</span>
+        <b className={classes.problemType}>{problemType}</b>
         <span className={classes.unitName}>{unitName}</span>
         <Button className={classes.button} onClick={handleAddBtnClick}>
           추가
@@ -53,7 +53,7 @@ export const SimilarItem: FC<Props> = ({ similar, similarArrIdx }) => {
       </div>
       <Divider className={classes.divider} />
       <div className={classes.body}>
-        <span className={classes.idx}>{similarArrIdx + 1}</span>
+        <b className={classes.idx}>{similarArrIdx + 1}</b>
         <img src={problemURL} alt={"N/A"} />
       </div>
     </li>

@@ -15,7 +15,6 @@ export const useStyles = makeStyles((theme: Theme) =>
     problemType: {
       width: "82px",
       color: color.textLight,
-      fontWeight: "bold",
       textAlign: "center",
       verticalAlign: "center",
       paddingTop: 8
@@ -44,7 +43,6 @@ export const useStyles = makeStyles((theme: Theme) =>
       height: "100%",
       width: "82px",
       color: color.textIdx,
-      fontWeight: "bold",
       fontSize: 24,
       textAlign: "center"
     }

@@ -17,7 +17,6 @@ export const useStyles = makeStyles((theme: Theme) =>
       borderBottom: `1px solid ${color.borderLight}`
     },
     title: {
-      fontWeight: "bold",
       color: color.textDark
     },
     bodyContainer: {

@@ -25,7 +25,7 @@ export const ProblemItem: FC<Props> = ({ problem, problemArrIdx, active }) => {
   return (
     <li className={classes.root}>
       <div className={classes.header}>
-        <span className={classes.problemType}>{problemType}</span>
+        <b className={classes.problemType}>{problemType}</b>
         <span className={classes.unitName}>{unitName}</span>
         <Button
           className={classes.button}
@@ -40,7 +40,7 @@ export const ProblemItem: FC<Props> = ({ problem, problemArrIdx, active }) => {
       </div>
       <Divider className={classes.divider} />
       <div className={classes.body}>
-        <span className={classes.idx}>{problemArrIdx + 1}</span>
+        <b className={classes.idx}>{problemArrIdx + 1}</b>
         <img src={problemURL} alt={"N/A"} />
       </div>
     </li>

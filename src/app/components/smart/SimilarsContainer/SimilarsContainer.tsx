@@ -26,7 +26,7 @@ export const SimilarsContainer = () => {
   return (
     <Box className={classes.root}>
       <AppBar className={classes.appBar} position="sticky">
-        <div className={classes.title}>문항 교체/추가</div>
+        <b className={classes.title}>문항 교체/추가</b>
       </AppBar>
       <div className={classes.bodyContainer}>
         {activeIdx < 0 ? (

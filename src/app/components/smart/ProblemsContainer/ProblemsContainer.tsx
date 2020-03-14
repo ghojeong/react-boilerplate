@@ -19,7 +19,7 @@ export const ProblemsContainer = () => {
   return (
     <Box className={classes.root}>
       <AppBar className={classes.appBar} position="sticky">
-        <div className={classes.title}>학습지 상세 편집</div>
+        <b className={classes.title}>학습지 상세 편집</b>
       </AppBar>
       <div className={classes.bodyContainer}>
         {isLoading ? (
