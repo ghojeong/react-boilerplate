@@ -18,20 +18,20 @@ export interface ProblemsState {
   activeIdx: number;
 }
 
-const initialState: ProblemsState = {
+export const problemsInitialState: ProblemsState = {
   isLoading: false,
   errMsg: "",
   array: [],
   activeIdx: -1
 };
 export const problemsReducer = (
-  state = initialState,
+  state = problemsInitialState,
   action: Actions
 ): ProblemsState => {
   const problemArr = cloneDeep(state.array);
   switch (action.type) {
     case getType(resetAction):
-      return initialState;
+      return problemsInitialState;
     case getType(fetchProblemsAsyncAction.request):
       return {
         ...state,

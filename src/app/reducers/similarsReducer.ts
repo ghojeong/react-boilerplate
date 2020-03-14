@@ -15,19 +15,19 @@ export interface SimilarsState {
   array: ProblemModel[];
 }
 
-const initialState: SimilarsState = {
+export const similarsInitialState: SimilarsState = {
   isLoading: false,
   errMsg: "",
   array: []
 };
 export const similarsReducer = (
-  state = initialState,
+  state = similarsInitialState,
   action: Actions
 ): SimilarsState => {
   const similarArr = cloneDeep(state.array);
   switch (action.type) {
     case getType(resetAction):
-      return initialState;
+      return similarsInitialState;
     case getType(fetchSimilarsAsyncAction.request):
       return {
         ...state,
