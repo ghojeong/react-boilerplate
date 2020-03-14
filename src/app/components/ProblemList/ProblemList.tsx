@@ -11,9 +11,13 @@ export const ProblemList: FC<Props> = ({ problems, activeIdx }) => {
   const classes = useStyles();
 
   return (
-    <List className={classes.root} style={{ overflow: "auto", height: "90%" }}>
+    <List className={classes.list}>
       {problems.map((problem, idx) => (
-        <ProblemItem problem={problem} active={idx === activeIdx} />
+        <ProblemItem
+          key={`problem-${problem.id}`}
+          problem={problem}
+          active={idx === activeIdx}
+        />
       ))}
     </List>
   );

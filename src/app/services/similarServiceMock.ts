@@ -220,7 +220,7 @@ export const similarService = {
       setTimeout(() => {
         subscriber.next(data);
         subscriber.complete();
-      }, 10);
+      }, 1000);
     });
   }
 };

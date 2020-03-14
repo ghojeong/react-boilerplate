@@ -220,7 +220,7 @@ export const problemService = {
       setTimeout(() => {
         subscriber.next(data);
         subscriber.complete();
-      }, 10);
+      }, 1000);
     });
   }
 };

@@ -10,7 +10,5 @@ interface Props {
 export const ProblemItem: FC<Props> = ({ problem, active }) => {
   const classes = useStyles();
 
-  return (
-    <ListItem key={`problem-${problem.id}`}>{JSON.stringify(problem)}</ListItem>
-  );
+  return <ListItem>{JSON.stringify(problem)}</ListItem>;
 };
