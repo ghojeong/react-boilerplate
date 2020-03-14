@@ -87,5 +87,4 @@ freewheelin 과제
 ### TO-BE
 
 - material-ui에 의존적인 컴포넌트들을, 디자인 시안에 맞게 다시 개발해야함
-  - `app/components/dumb/material`
-  - `app/components/smart/Notifier`
+  - `app/components/material`

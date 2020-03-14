@@ -14,14 +14,14 @@ export interface ProblemsState {
   isLoading: boolean;
   errMsg: string;
   array: ProblemModel[];
-  activeArrIdx: number;
+  activeIdx: number;
 }
 
 const initialState: ProblemsState = {
   isLoading: false,
   errMsg: "",
   array: [],
-  activeArrIdx: 0
+  activeIdx: 0
 };
 export const problemsReducer = (
   state = initialState,
@@ -52,7 +52,7 @@ export const problemsReducer = (
     case getType(activateProblemAction):
       return {
         ...state,
-        activeArrIdx: action.payload.problemArrIdx
+        activeIdx: action.payload.problemArrIdx
       };
     case getType(removeProblemAction):
       return {
