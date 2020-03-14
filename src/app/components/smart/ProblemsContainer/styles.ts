@@ -12,7 +12,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: "#FFFFFF",
       display: "flex",
       justifyContent: "center",
-      paddingLeft: theme.spacing(2)
+      paddingLeft: theme.spacing(2),
+      borderBottom: "1px solid #F5F5F5"
     },
     title: {
       fontWeight: "bold",
@@ -20,7 +21,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     bodyContainer: {
       height: `calc(100% - 48px)`,
-      overflow: "auto"
+      overflow: "auto",
+      backgroundColor: "#FFFFFF"
     },
     circularProgress: {
       height: "100%",

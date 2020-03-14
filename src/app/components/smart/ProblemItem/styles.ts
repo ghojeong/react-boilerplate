@@ -28,9 +28,14 @@ export const useStyles = makeStyles((theme: Theme) =>
     button: {
       marginLeft: theme.spacing(1)
     },
+    divider: {
+      marginLeft: theme.spacing(2),
+      marginTop: theme.spacing(1),
+      marginBottom: theme.spacing(1),
+      backgroundColor: "#D8D8D8"
+    },
     body: {
-      display: "flex",
-      marginTop: theme.spacing(1)
+      display: "flex"
     },
     idx: {
       height: "100%",

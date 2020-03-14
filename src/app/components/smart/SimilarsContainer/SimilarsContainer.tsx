@@ -22,7 +22,7 @@ export const SimilarsContainer = () => {
   }, [dispatch]);
 
   return (
-    <Box className={classes.root} borderLeft={1}>
+    <Box className={classes.root}>
       <AppBar className={classes.appBar} position="sticky">
         <div className={classes.title}>문항 교체/추가</div>
       </AppBar>

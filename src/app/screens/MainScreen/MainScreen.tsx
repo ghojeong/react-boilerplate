@@ -10,7 +10,11 @@ export const MainScreen = () => {
       <Grid item xs={6} className={classes.gridItem}>
         <ProblemsContainer />
       </Grid>
-      <Grid item xs={6} className={classes.gridItem}>
+      <Grid
+        item
+        xs={6}
+        className={`${classes.gridItem} ${classes.gridRightItem}`}
+      >
         <SimilarsContainer />
       </Grid>
     </Grid>

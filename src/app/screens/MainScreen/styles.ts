@@ -8,5 +8,8 @@ export const useStyles = makeStyles({
   gridItem: {
     height: "100vh",
     overflow: "auto"
+  },
+  gridRightItem: {
+    borderLeft: "1px solid #F5F5F5"
   }
 });
