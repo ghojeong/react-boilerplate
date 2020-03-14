@@ -2,11 +2,7 @@ import MuiGrid from "@material-ui/core/Grid";
 import MuiBox from "@material-ui/core/Box";
 import MuiAppBar from "@material-ui/core/AppBar";
 import MuiList from "@material-ui/core/List";
-import MuiListItem from "@material-ui/core/ListItem";
-import MuiTypography from "@material-ui/core/Typography";
-
 import MuiDivider from "@material-ui/core/Divider";
-import MuiPaper from "@material-ui/core/Paper";
 import MuiCircularProgress from "@material-ui/core/CircularProgress";
 
 /**
@@ -20,9 +16,5 @@ export const Grid = MuiGrid;
 export const Box = MuiBox;
 export const AppBar = MuiAppBar;
 export const List = MuiList;
-export const ListItem = MuiListItem;
-export const Typography = MuiTypography;
-
 export const Divider = MuiDivider;
-export const Paper = MuiPaper;
 export const CircularProgress = MuiCircularProgress;
