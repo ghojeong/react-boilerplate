@@ -3,7 +3,9 @@ import { Theme, makeStyles, createStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      padding: theme.spacing(2)
+      padding: theme.spacing(2),
+      paddingBottom: theme.spacing(4),
+      borderBottom: "8px solid #979797"
     },
     header: {
       display: "flex",

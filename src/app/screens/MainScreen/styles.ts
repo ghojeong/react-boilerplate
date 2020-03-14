@@ -10,6 +10,6 @@ export const useStyles = makeStyles({
     overflow: "auto"
   },
   gridRightItem: {
-    borderLeft: "1px solid #F5F5F5"
+    borderLeft: "8px solid #F5F5F5"
   }
 });
