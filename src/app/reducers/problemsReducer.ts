@@ -66,6 +66,7 @@ export const problemsReducer = (
             ? -1
             : state.activeIdx
       };
+    // TODO: 똑같은 id의 문제가 중복되어 추가될 수 있는지, 기획의도를 확인해야한다.
     case getType(addSimilarToProblemAction):
       problemArr.splice(
         action.payload.problemArrIdx + 1,
@@ -76,6 +77,7 @@ export const problemsReducer = (
         ...state,
         array: problemArr
       };
+    // TODO: 똑같은 id의 문제가 중복되어 교체될 수 있는지, 기획의도를 확인해야한다.
     case getType(replaceSimilarWithProblemAction):
       problemArr.splice(
         action.payload.problemArrIdx,

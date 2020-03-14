@@ -53,6 +53,7 @@ export const similarsReducer = (
         ...state,
         array: similarArr
       };
+    // TODO: 똑같은 id의 문제가 중복되어 교체될 수 있는지, 기획의도를 확인해야한다.
     case getType(replaceSimilarWithProblemAction):
       similarArr.splice(
         action.payload.similarArrIdx,
