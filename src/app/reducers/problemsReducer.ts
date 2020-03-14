@@ -59,7 +59,11 @@ export const problemsReducer = (
       problemArr.splice(action.payload.problemArrIdx, 1);
       return {
         ...state,
-        array: problemArr
+        array: problemArr,
+        activeIdx:
+          action.payload.problemArrIdx === state.activeIdx
+            ? -1
+            : state.activeIdx
       };
     case getType(addSimilarToProblemAction):
       problemArr.splice(
