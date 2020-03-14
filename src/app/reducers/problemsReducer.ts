@@ -27,6 +27,7 @@ export const problemsReducer = (
   state = initialState,
   action: Actions
 ): ProblemsState => {
+  const problemArr = state.array;
   switch (action.type) {
     case getType(resetAction):
       return initialState;
@@ -55,27 +56,30 @@ export const problemsReducer = (
         activeIdx: action.payload.problemArrIdx
       };
     case getType(removeProblemAction):
+      problemArr.splice(action.payload.problemArrIdx, 1);
       return {
         ...state,
-        array: state.array.splice(action.payload.problemArrIdx, 1)
+        array: problemArr
       };
     case getType(addSimilarToProblemAction):
+      problemArr.splice(
+        action.payload.problemArrIdx + 1,
+        0,
+        action.payload.similar
+      );
       return {
         ...state,
-        array: state.array.splice(
-          action.payload.problemArrIdx + 1,
-          0,
-          action.payload.similar
-        )
+        array: problemArr
       };
     case getType(replaceSimilarWithProblemAction):
+      problemArr.splice(
+        action.payload.problemArrIdx,
+        1,
+        action.payload.similar
+      );
       return {
         ...state,
-        array: state.array.splice(
-          action.payload.problemArrIdx,
-          1,
-          action.payload.similar
-        )
+        array: problemArr
       };
     default:
       return state;

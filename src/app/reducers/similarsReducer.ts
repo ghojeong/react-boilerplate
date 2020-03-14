@@ -23,6 +23,7 @@ export const similarsReducer = (
   state = initialState,
   action: Actions
 ): SimilarsState => {
+  const similarArr = state.array;
   switch (action.type) {
     case getType(resetAction):
       return initialState;
@@ -46,18 +47,20 @@ export const similarsReducer = (
         errMsg: action.payload
       };
     case getType(addSimilarToProblemAction):
+      similarArr.splice(action.payload.similarArrIdx, 1);
       return {
         ...state,
-        array: state.array.splice(action.payload.similarArrIdx, 1)
+        array: similarArr
       };
     case getType(replaceSimilarWithProblemAction):
+      similarArr.splice(
+        action.payload.similarArrIdx,
+        1,
+        action.payload.problem
+      );
       return {
         ...state,
-        array: state.array.splice(
-          action.payload.similarArrIdx,
-          1,
-          action.payload.problem
-        )
+        array: similarArr
       };
     default:
       return state;
