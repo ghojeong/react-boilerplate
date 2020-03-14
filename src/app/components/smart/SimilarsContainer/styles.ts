@@ -1,4 +1,5 @@
 import { Theme, makeStyles, createStyles } from "@material-ui/core/styles";
+import { color } from "app/themes/color";
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -8,22 +9,22 @@ export const useStyles = makeStyles((theme: Theme) =>
     appBar: {
       height: "48px",
       boxShadow: "none",
-      color: "#000000",
-      backgroundColor: "#FFFFFF",
+      color: color.textAppBar,
+      backgroundColor: color.appBarBackground,
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
       paddingLeft: theme.spacing(2),
-      borderBottom: "1px solid #F5F5F5"
+      borderBottom: `1px solid ${color.borderLight}`
     },
     title: {
       fontWeight: "bold",
-      color: "#4C4C4C"
+      color: color.textDark
     },
     bodyContainer: {
       height: `calc(100% - 48px)`,
       overflow: "auto",
-      backgroundColor: "#FFFFFF"
+      backgroundColor: color.bodyBackground
     },
     circularProgress: {
       height: "100%",

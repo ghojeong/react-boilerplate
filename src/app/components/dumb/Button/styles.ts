@@ -1,4 +1,5 @@
 import { Theme, makeStyles, createStyles } from "@material-ui/core/styles";
+import { color } from "app/themes/color";
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -9,14 +10,14 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontWeight: "bold"
     },
     outlined: {
-      border: "1px solid #E0E0E0 !important"
+      border: `1px solid ${color.borderMain} !important`
     },
     contained: {
       boxShadow: "none !important"
     },
     disabled: {
-      border: "1px solid #E0E0E0 !important",
-      color: "#00ABFF !important"
+      border: `1px solid ${color.borderMain} !important`,
+      color: `${theme.palette.primary.main} !important`
     }
   })
 );

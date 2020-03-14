@@ -1,11 +1,12 @@
 import { Theme, makeStyles, createStyles } from "@material-ui/core/styles";
+import { color } from "app/themes/color";
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       padding: theme.spacing(2),
       paddingBottom: theme.spacing(4),
-      borderBottom: "8px solid #F5F5F5"
+      borderBottom: `8px solid ${color.borderLight}`
     },
     header: {
       display: "flex",
@@ -13,7 +14,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     problemType: {
       width: "82px",
-      color: "#9F9F9F",
+      color: color.textLight,
       fontWeight: "bold",
       textAlign: "center",
       verticalAlign: "center",
@@ -21,7 +22,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     unitName: {
       flexGrow: 1,
-      color: "#4C4C4C",
+      color: color.textDark,
       whiteSpace: "nowrap",
       overflow: "hidden",
       textOverflow: "ellipsis",
@@ -34,7 +35,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginLeft: theme.spacing(2),
       marginTop: theme.spacing(1),
       marginBottom: theme.spacing(1),
-      backgroundColor: "#D8D8D8"
+      backgroundColor: color.divider
     },
     body: {
       display: "flex"
@@ -42,7 +43,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     idx: {
       height: "100%",
       width: "82px",
-      color: "#02C7F2",
+      color: color.textIdx,
       fontWeight: "bold",
       fontSize: 24,
       textAlign: "center"

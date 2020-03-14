@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
+import { color } from "app/themes/color";
 
 export const useStyles = makeStyles({
   root: {
@@ -10,6 +11,6 @@ export const useStyles = makeStyles({
     overflow: "auto"
   },
   gridRightItem: {
-    borderLeft: "8px solid #F5F5F5"
+    borderLeft: `8px solid ${color.borderLight}`
   }
 });
