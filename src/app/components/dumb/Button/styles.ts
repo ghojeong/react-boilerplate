@@ -5,9 +5,10 @@ export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       height: "36px",
-      width: "90px",
-      fontSize: 14,
-      fontWeight: "bold"
+      width: "90px"
+    },
+    children: {
+      fontSize: 14
     },
     outlined: {
       border: `1px solid ${color.borderMain} !important`

@@ -19,7 +19,7 @@ export const Button: FC<Props> = ({ active, ...btnProps }) => {
         variant="outlined"
         onClick={onClick}
       >
-        {children}
+        <b className={classes.children}>{children}</b>
       </MuiButton>
     );
   }
@@ -33,7 +33,7 @@ export const Button: FC<Props> = ({ active, ...btnProps }) => {
         variant="contained"
         onClick={onClick}
       >
-        {children}
+        <b className={classes.children}>{children}</b>
       </MuiButton>
     );
   }
@@ -45,7 +45,7 @@ export const Button: FC<Props> = ({ active, ...btnProps }) => {
       variant="outlined"
       onClick={onClick}
     >
-      {children}
+      <b className={classes.children}>{children}</b>
     </MuiButton>
   );
 };
