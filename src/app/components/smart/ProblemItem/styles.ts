@@ -31,6 +31,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginLeft: theme.spacing(1)
     },
     divider: {
+      height: 2,
       marginLeft: theme.spacing(2),
       marginTop: theme.spacing(1),
       marginBottom: theme.spacing(1),
