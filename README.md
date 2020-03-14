@@ -1,6 +1,6 @@
-# DoDo Message
+# freewheelin
 
-스포카 프론트엔드 프로그래머 채용 과제인 도도 메시지 프로젝트입니다.
+freewheelin 과제
 
 ## 프로젝트 실행법
 
@@ -22,7 +22,7 @@
 
 ## Directory Structure
 
-```
+```txt
 └── src
   └── app
     ├── actions
@@ -94,14 +94,8 @@
 
 ### AS-IS
 
-- **손님 타겟팅** 기능 개발 완료
-
 ### TO-BE
 
-- **메시지 작성** 기능 개발 필요
-- **메시지 최종 확인** 기능 개발 필요
 - material-ui에 의존적인 컴포넌트들을, 디자인 시안에 맞게 다시 개발해야함
   - `app/components/dumb/material`
   - `app/components/smart/Notifier`
-- 해결해야 할 버그
-  - material-ui와 호환되도록 테스트 환경을 다시 구축해야함
