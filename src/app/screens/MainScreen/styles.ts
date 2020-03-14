@@ -8,7 +8,8 @@ export const useStyles = makeStyles({
   },
   gridItem: {
     height: "100vh",
-    overflow: "auto"
+    overflow: "auto",
+    borderRight: `2px solid ${color.borderMain}`
   },
   gridRightItem: {
     borderLeft: `8px solid ${color.borderLight}`
