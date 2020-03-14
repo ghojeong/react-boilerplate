@@ -15,7 +15,7 @@ export const SimilarList: FC<Props> = ({ similars }) => {
         <SimilarItem
           key={`similar-${similar.id}`}
           similar={similar}
-          similarIdx={idx}
+          similarArrIdx={idx}
         />
       ))}
     </List>

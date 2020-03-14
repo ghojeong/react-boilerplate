@@ -1,27 +1,23 @@
 import React, { FC } from "react";
 import { useStyles } from "./styles";
 import MuiButton from "@material-ui/core/Button";
+import { ButtonProps } from "@material-ui/core/Button";
 
-interface Props {
-  className?: string;
+interface Props extends ButtonProps {
   active?: boolean;
-  disabled?: boolean;
 }
-export const Button: FC<Props> = ({
-  children,
-  className,
-  active,
-  disabled
-}) => {
+export const Button: FC<Props> = ({ active, ...btnProps }) => {
   const classes = useStyles();
+  const { children, className, disabled, onClick } = btnProps;
 
   if (disabled) {
     return (
       <MuiButton
+        {...btnProps}
         className={`${classes.root} ${classes.disabled} ${className}`}
         color="primary"
         variant="outlined"
-        disabled
+        onClick={onClick}
       >
         {children}
       </MuiButton>
@@ -31,9 +27,11 @@ export const Button: FC<Props> = ({
   if (active) {
     return (
       <MuiButton
+        {...btnProps}
         className={`${classes.root} ${classes.contained} ${className}`}
         color="primary"
         variant="contained"
+        onClick={onClick}
       >
         {children}
       </MuiButton>
@@ -45,6 +43,7 @@ export const Button: FC<Props> = ({
       className={`${classes.root} ${classes.outlined} ${className}`}
       color="primary"
       variant="outlined"
+      onClick={onClick}
     >
       {children}
     </MuiButton>

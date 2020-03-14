@@ -21,7 +21,7 @@ const initialState: ProblemsState = {
   isLoading: false,
   errMsg: "",
   array: [],
-  activeIdx: 0
+  activeIdx: -1
 };
 export const problemsReducer = (
   state = initialState,

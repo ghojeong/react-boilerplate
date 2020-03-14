@@ -16,7 +16,7 @@ export const ProblemList: FC<Props> = ({ problems, activeIdx }) => {
         <ProblemItem
           key={`problem-${problem.id}`}
           problem={problem}
-          problemIdx={idx}
+          problemArrIdx={idx}
           active={idx === activeIdx}
         />
       ))}

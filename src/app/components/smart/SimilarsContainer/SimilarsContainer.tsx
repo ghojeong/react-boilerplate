@@ -18,8 +18,10 @@ export const SimilarsContainer = () => {
   const { activeIdx } = useSelector(problemsSelector());
 
   useEffect(() => {
-    dispatch(fetchSimilarsAsyncAction.request());
-  }, [dispatch]);
+    if (activeIdx >= 0) {
+      dispatch(fetchSimilarsAsyncAction.request());
+    }
+  }, [dispatch, activeIdx]);
 
   return (
     <Box className={classes.root}>
@@ -27,20 +29,19 @@ export const SimilarsContainer = () => {
         <div className={classes.title}>문항 교체/추가</div>
       </AppBar>
       <div className={classes.bodyContainer}>
-        {isLoading ? (
-          <div className={classes.circularProgress}>
-            <CircularProgress />
-          </div>
-        ) : activeIdx ? (
-          <SimilarList similars={similars}></SimilarList>
-        ) : (
+        {activeIdx < 0 ? (
           <div className={classes.placeholder}>
             <div>
-              {" "}
               <Button disabled>유사문항</Button> 버튼을 누르면
             </div>
             <div>해당 문제의 유사문항을 볼 수 있습니다.</div>
           </div>
+        ) : isLoading ? (
+          <div className={classes.circularProgress}>
+            <CircularProgress />
+          </div>
+        ) : (
+          <SimilarList similars={similars}></SimilarList>
         )}
       </div>
     </Box>
