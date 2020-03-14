@@ -12,10 +12,6 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     contained: {
       boxShadow: "none !important"
-    },
-    disabled: {
-      border: `1px solid ${color.borderMain} !important`,
-      color: `${theme.palette.primary.main} !important`
     }
   })
 );

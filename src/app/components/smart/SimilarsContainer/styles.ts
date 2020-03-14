@@ -37,6 +37,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center"
+    },
+    placeholderDisabledBtn: {
+      border: `1px solid ${color.borderMain} !important`,
+      color: `${theme.palette.primary.main} !important`
     }
   })
 );

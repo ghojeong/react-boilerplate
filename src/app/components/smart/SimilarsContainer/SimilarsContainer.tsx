@@ -32,7 +32,10 @@ export const SimilarsContainer = () => {
         {activeIdx < 0 ? (
           <div className={classes.placeholder}>
             <div>
-              <Button disabled>유사문항</Button> 버튼을 누르면
+              <Button disabled className={classes.placeholderDisabledBtn}>
+                유사문항
+              </Button>
+              버튼을 누르면
             </div>
             <div>해당 문제의 유사문항을 볼 수 있습니다.</div>
           </div>

@@ -10,20 +10,6 @@ export const Button: FC<Props> = ({ active, ...btnProps }) => {
   const classes = useStyles();
   const { children, className, disabled, onClick } = btnProps;
 
-  if (disabled) {
-    return (
-      <MuiButton
-        {...btnProps}
-        className={`${classes.root} ${classes.disabled} ${className}`}
-        color="primary"
-        variant="outlined"
-        onClick={onClick}
-      >
-        <b>{children}</b>
-      </MuiButton>
-    );
-  }
-
   if (active) {
     return (
       <MuiButton
@@ -31,6 +17,7 @@ export const Button: FC<Props> = ({ active, ...btnProps }) => {
         className={`${classes.root} ${classes.contained} ${className}`}
         color="primary"
         variant="contained"
+        disabled={disabled}
         onClick={onClick}
       >
         <b>{children}</b>
@@ -43,6 +30,7 @@ export const Button: FC<Props> = ({ active, ...btnProps }) => {
       className={`${classes.root} ${classes.outlined} ${className}`}
       color="primary"
       variant="outlined"
+      disabled={disabled}
       onClick={onClick}
     >
       <b>{children}</b>
