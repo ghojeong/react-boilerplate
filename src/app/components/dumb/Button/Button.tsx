@@ -3,11 +3,30 @@ import { useStyles } from "./styles";
 import MuiButton from "@material-ui/core/Button";
 
 interface Props {
-  active?: boolean;
   className?: string;
+  active?: boolean;
+  disabled?: boolean;
 }
-export const Button: FC<Props> = ({ children, active, className }) => {
+export const Button: FC<Props> = ({
+  children,
+  className,
+  active,
+  disabled
+}) => {
   const classes = useStyles();
+
+  if (disabled) {
+    return (
+      <MuiButton
+        className={`${classes.root} ${classes.disabled} ${className}`}
+        color="primary"
+        variant="outlined"
+        disabled
+      >
+        {children}
+      </MuiButton>
+    );
+  }
 
   if (active) {
     return (

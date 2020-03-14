@@ -1,14 +1,21 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useStyles } from "./styles";
-import { Box, AppBar, CircularProgress, SimilarList } from "app/components";
+import {
+  Box,
+  AppBar,
+  CircularProgress,
+  SimilarList,
+  Button
+} from "app/components";
 import { fetchSimilarsAsyncAction } from "app/actions";
-import { similarsSelector } from "app/selectors";
+import { similarsSelector, problemsSelector } from "app/selectors";
 
 export const SimilarsContainer = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const { isLoading, array: similars } = useSelector(similarsSelector());
+  const { activeIdx } = useSelector(problemsSelector());
 
   useEffect(() => {
     dispatch(fetchSimilarsAsyncAction.request());
@@ -24,8 +31,16 @@ export const SimilarsContainer = () => {
           <div className={classes.circularProgress}>
             <CircularProgress />
           </div>
-        ) : (
+        ) : activeIdx ? (
           <SimilarList similars={similars}></SimilarList>
+        ) : (
+          <div className={classes.placeholder}>
+            <div>
+              {" "}
+              <Button disabled>유사문항</Button> 버튼을 누르면
+            </div>
+            <div>해당 문제의 유사문항을 볼 수 있습니다.</div>
+          </div>
         )}
       </div>
     </Box>

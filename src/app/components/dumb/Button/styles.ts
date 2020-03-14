@@ -13,6 +13,10 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     contained: {
       boxShadow: "none !important"
+    },
+    disabled: {
+      border: "1px solid #E0E0E0 !important",
+      color: "#00ABFF !important"
     }
   })
 );
