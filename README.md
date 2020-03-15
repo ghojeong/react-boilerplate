@@ -6,7 +6,7 @@ freewheelin 과제
 
 1. `npm i`: npm 패키지 설치
 2. `npm start`: 프로젝트 실행
-3. 브라우저로 `http://localhost:3000/` 에 접근
+3. 브라우저로 `http://localhost:3000` 에 접근
 
 ## Command
 
