@@ -64,6 +64,8 @@ export const problemsReducer = (
         activeIdx:
           action.payload.problemArrIdx === state.activeIdx
             ? -1
+            : action.payload.problemArrIdx < state.activeIdx
+            ? state.activeIdx - 1
             : state.activeIdx
       };
     // TODO: 똑같은 id의 문제가 중복되어 추가될 수 있는지, 기획의도를 확인해야한다.
